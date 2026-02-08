@@ -1,0 +1,19 @@
+def restaurar_caminho_neo4j():
+    # Recebe a entrada do usuário (ex: "ProjetoC->IdeiaB->PessoaA")
+    entrada = input("Digite o caminho invertido: ")
+    
+    # 1. Divide a string em uma lista de nós usando '->' como separador
+    nos = entrada.split('->')
+    
+    # 2. Inverte a ordem dos elementos da lista
+    # O nó que era o fim agora é o começo
+    nos.reverse()
+    
+    # 3. Junta os nós novamente em uma string usando o separador correto
+    caminho_correto = '->'.join(nos)
+    
+    # Exibe o resultado final preservando o formato
+    print(caminho_correto)
+
+# Executa a função
+restaurar_caminho_neo4j()
